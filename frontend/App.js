@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
-import { AuthProvider } from './src/context/AuthContext';
+import { AppProvider } from './src/context/AppContext';
 import { ThemeProvider, useTheme } from './src/context/ThemeContext';
 import { LanguageProvider } from './src/i18n/LanguageContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -15,8 +15,6 @@ import ListScreen from './src/screens/ListScreen';
 import DetailScreen from './src/screens/DetailScreen';
 import FavoritesScreen from './src/screens/FavoritesScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
-import LoginScreen from './src/screens/LoginScreen';
-import RegisterScreen from './src/screens/RegisterScreen';
 import FilterScreen from './src/screens/FilterScreen';
 
 const Tab = createBottomTabNavigator();
@@ -135,16 +133,6 @@ const AppNavigator = () => {
           component={FilterScreen}
           options={{ presentation: 'modal' }}
         />
-        <Stack.Screen
-          name="Login"
-          component={LoginScreen}
-          options={{ animation: 'slide_from_bottom' }}
-        />
-        <Stack.Screen
-          name="Register"
-          component={RegisterScreen}
-          options={{ animation: 'slide_from_bottom' }}
-        />
       </Stack.Navigator>
       </NavigationContainer>
       </View>
@@ -154,13 +142,13 @@ const AppNavigator = () => {
 
 export default function App() {
   return (
-    <AuthProvider>
+    <AppProvider>
       <ThemeProvider>
         <LanguageProvider>
           <AppNavigator />
         </LanguageProvider>
       </ThemeProvider>
-    </AuthProvider>
+    </AppProvider>
   );
 }
 

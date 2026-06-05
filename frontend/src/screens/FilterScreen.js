@@ -18,6 +18,12 @@ const baseSpirits = [
   { key: 'Bourbon', labelKey: 'bourbon' },
   { key: 'Scotch', labelKey: 'scotch' },
   { key: 'Cognac', labelKey: 'cognac' },
+  { key: 'Mezcal', labelKey: 'mezcal' },
+  { key: 'Pisco', labelKey: 'pisco' },
+  { key: 'Cachaca', labelKey: 'cachaca' },
+  { key: 'Irish Whiskey', labelKey: 'irishWhiskey' },
+  { key: 'Aperol', labelKey: 'aperol' },
+  { key: 'Campari', labelKey: 'campari' },
 ];
 const ingredientsList = [
   { key: 'Lime juice', labelKey: 'limeJuice' },
@@ -209,7 +215,7 @@ const FilterScreen = ({ navigation, route }) => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} backgroundColor={c.background} />
+      <StatusBar hidden />
       <View style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => navigation.goBack()} style={styles.closeBtn}>

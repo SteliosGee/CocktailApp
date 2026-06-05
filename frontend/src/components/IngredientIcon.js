@@ -250,7 +250,8 @@ const IngredientIcon = ({ name, size = 52 }) => {
   const lower = name?.toLowerCase() || '';
   let matchedKey = null;
 
-  for (const key of Object.keys(ingredientSvgs)) {
+  const sortedKeys = Object.keys(ingredientSvgs).sort((a, b) => b.length - a.length);
+  for (const key of sortedKeys) {
     if (lower.includes(key)) {
       matchedKey = key;
       break;

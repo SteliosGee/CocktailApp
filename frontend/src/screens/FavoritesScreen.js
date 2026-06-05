@@ -4,9 +4,8 @@ import {
   TouchableOpacity, ActivityIndicator, RefreshControl, Alert, Animated,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useAuth } from '../context/AuthContext';
 import { useTheme, makeStyles } from '../context/ThemeContext';
-import { cocktailService } from '../services/api';
+import { dataService } from '../services/dataService';
 import CocktailSvgIcon from '../components/CocktailSvgIcon';
 import { s } from '../utils/responsive';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -122,7 +121,6 @@ const useStyles = makeStyles((c) => ({
 const FavoritesScreen = ({ navigation }) => {
   const { colors: c, isDark } = useTheme();
   const styles = useStyles();
-  const { user } = useAuth();
   const { t, language } = useLanguage();
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -131,12 +129,12 @@ const FavoritesScreen = ({ navigation }) => {
   const fadeAnim = useState(new Animated.Value(0))[0];
 
   useEffect(() => {
-    if (user) fetchFavorites();
-  }, [user]);
+    fetchFavorites();
+  }, []);
 
   useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
-      if (user) fetchFavorites(false);
+      fetchFavorites(false);
       Animated.timing(fadeAnim, {
         toValue: 1,
         duration: 400,
@@ -144,13 +142,13 @@ const FavoritesScreen = ({ navigation }) => {
       }).start();
     });
     return unsubscribe;
-  }, [navigation, user]);
+  }, [navigation]);
 
   const fetchFavorites = async (showLoader = true) => {
     if (showLoader) setLoading(true);
     try {
-      const response = await cocktailService.getFavorites();
-      setFavorites(response.data.results || response.data);
+      const response = await dataService.getFavorites();
+      setFavorites(response.data);
       setError(null);
     } catch (error) {
       setError(t('failedLoadFavs'));
@@ -173,7 +171,7 @@ const FavoritesScreen = ({ navigation }) => {
         style: 'destructive',
         onPress: async () => {
           try {
-            await cocktailService.removeFavorite(favId);
+            await dataService.removeFavorite(favId);
             setFavorites((prev) => prev.filter((f) => f.id !== favId));
           } catch (error) {
             Alert.alert(t('error'), t('failedRemoveFav'));
@@ -182,32 +180,6 @@ const FavoritesScreen = ({ navigation }) => {
       },
     ]);
   };
-
-  if (!user) {
-    return (
-      <SafeAreaView style={styles.safeArea}>
-        <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} backgroundColor={c.backgroundGray} />
-        <View style={styles.container}>
-          <View style={styles.headerSection}>
-            <Text style={styles.title}>{t('favorites')}</Text>
-          </View>
-          <View style={styles.emptyState}>
-            <View style={styles.emptyIconWrap}>
-              <Ionicons name="heart-outline" size={36} color={c.textMuted} />
-            </View>
-            <Text style={styles.emptyTitle}>{t('signInViewFavs')}</Text>
-            <Text style={styles.emptyText}>
-              {t('favsDescription')}
-            </Text>
-            <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate('Login')}>
-              <Ionicons name="log-in" size={18} color={c.white} />
-              <Text style={styles.loginBtnText}>{t('logIn')}</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </SafeAreaView>
-    );
-  }
 
   const renderItem = ({ item }) => {
     const cocktail = item.cocktail || item;
@@ -244,7 +216,7 @@ const FavoritesScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} backgroundColor={c.backgroundGray} />
+      <StatusBar hidden />
       <View style={styles.container}>
         <View style={styles.headerSection}>
           <Text style={styles.title}>{t('favorites')}</Text>

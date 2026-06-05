@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {
   View, Text, FlatList, SafeAreaView, StatusBar,
   TouchableOpacity, TextInput, ActivityIndicator, RefreshControl, Animated,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme, makeStyles } from '../context/ThemeContext';
-import { cocktailService } from '../services/api';
+import { dataService } from '../services/dataService';
 import { s } from '../utils/responsive';
 import CocktailSvgIcon from '../components/CocktailSvgIcon';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -175,21 +175,22 @@ const ListScreen = ({ navigation }) => {
     base_spirit: null,
     ingredient: null,
   });
+  const filtersRef = useRef(filters);
 
   const fetchCocktails = async (showLoader = true, currentFilters = null) => {
     if (showLoader) setLoading(true);
     setError(null);
     try {
-      const f = currentFilters || filters;
+      const f = currentFilters || filtersRef.current;
       const params = {};
       if (f.is_alcoholic !== null) params.is_alcoholic = f.is_alcoholic;
       if (f.base_spirit) params.base_spirit = f.base_spirit;
       if (f.ingredient) params.ingredient = f.ingredient;
 
-      const response = await cocktailService.getAll(
-        Object.keys(params).length > 0 ? params : undefined
+      const response = await dataService.getAll(
+        Object.keys(params).length > 0 ? params : {}
       );
-      setCocktails(response.data.results || response.data);
+      setCocktails(response.data);
     } catch (err) {
       setError(t('failedLoadCocktails'));
     } finally {
@@ -215,17 +216,23 @@ const ListScreen = ({ navigation }) => {
   const onRefresh = useCallback(() => {
     setRefreshing(true);
     fetchCocktails(false);
-  }, [filters]);
+  }, []);
 
   const handleFilterApply = (newFilters) => {
     setFilters(newFilters);
+    filtersRef.current = newFilters;
     fetchCocktails(false, newFilters);
   };
 
   const filteredCocktails = cocktails.filter(
-    (cocktail) =>
-      cocktail.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (cocktail.description || '').toLowerCase().includes(searchQuery.toLowerCase())
+    (cocktail) => {
+      const q = searchQuery.toLowerCase();
+      if (cocktail.name.toLowerCase().includes(q)) return true;
+      if ((cocktail.description || '').toLowerCase().includes(q)) return true;
+      if (cocktail.base_spirit && cocktail.base_spirit.toLowerCase().includes(q)) return true;
+      if (cocktail.ingredients && cocktail.ingredients.some(ing => ing.name.toLowerCase().includes(q))) return true;
+      return false;
+    }
   );
 
   const activeFilterCount =
@@ -311,7 +318,7 @@ const ListScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} backgroundColor={c.backgroundGray} />
+      <StatusBar hidden />
       <View style={styles.container}>
         <View style={styles.headerSection}>
           <Text style={styles.title}>{t('cocktails')}</Text>

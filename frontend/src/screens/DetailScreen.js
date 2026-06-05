@@ -5,8 +5,8 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
-import { cocktailService } from '../services/api';
-import { useAuth } from '../context/AuthContext';
+import { dataService } from '../services/dataService';
+import { useAuth } from '../context/AppContext';
 import { useTheme, makeStyles } from '../context/ThemeContext';
 import { convertQuantity, formatQuantity } from '../utils/units';
 import IngredientIcon from '../components/IngredientIcon';
@@ -227,7 +227,7 @@ const useStyles = makeStyles((c, g) => ({
 
 const DetailScreen = ({ route, navigation }) => {
   const { cocktailId } = route.params;
-  const { user, units } = useAuth();
+  const { units } = useAuth();
   const { colors: c, gradients: g, isDark } = useTheme();
   const { t, language } = useLanguage();
   const styles = useStyles();
@@ -242,7 +242,7 @@ const DetailScreen = ({ route, navigation }) => {
 
   const fetchCocktail = async () => {
     try {
-      const response = await cocktailService.getById(cocktailId);
+      const response = await dataService.getById(cocktailId);
       const data = response.data;
       setCocktail(data);
       setFetchError(null);
@@ -258,21 +258,14 @@ const DetailScreen = ({ route, navigation }) => {
   };
 
   const toggleFavorite = async () => {
-    if (!user) {
-      Alert.alert(t('signInRequired'), t('signInFavPrompt'), [
-        { text: t('cancel'), style: 'cancel' },
-        { text: t('logIn'), onPress: () => navigation.navigate('Login') },
-      ]);
-      return;
-    }
     setToggleLoading(true);
     try {
       if (isFavorite && favoriteId) {
-        await cocktailService.removeFavorite(favoriteId);
+        await dataService.removeFavorite(favoriteId);
         setIsFavorite(false);
         setFavoriteId(null);
       } else {
-        const response = await cocktailService.addFavorite(cocktailId);
+        const response = await dataService.addFavorite(cocktailId);
         setIsFavorite(true);
         setFavoriteId(response.data.id);
       }
@@ -335,7 +328,7 @@ const DetailScreen = ({ route, navigation }) => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} backgroundColor={c.primary} />
+      <StatusBar hidden />
       <View style={styles.container}>
         <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
           <View style={styles.backBtnBg}>

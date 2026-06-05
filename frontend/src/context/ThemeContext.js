@@ -1,18 +1,22 @@
 import React, { createContext, useState, useContext, useEffect, useMemo } from 'react';
 import { Appearance, StyleSheet } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { colors, darkColors, gradients, darkGradients } from '../theme/colors';
-import { useAuth } from './AuthContext';
-import { authService } from '../services/api';
 
 const ThemeContext = createContext(null);
+const THEME_KEY = 'appTheme';
 
 export const ThemeProvider = ({ children }) => {
-  const { user } = useAuth();
   const [themeName, setThemeName] = useState('light');
 
   useEffect(() => {
-    if (user) loadTheme();
-  }, [user]);
+    (async () => {
+      try {
+        const stored = await AsyncStorage.getItem(THEME_KEY);
+        if (stored) setThemeName(stored);
+      } catch {}
+    })();
+  }, []);
 
   useEffect(() => {
     if (themeName === 'system') {
@@ -21,23 +25,9 @@ export const ThemeProvider = ({ children }) => {
     }
   }, [themeName]);
 
-  const loadTheme = async () => {
-    try {
-      const response = await authService.getProfile();
-      const t = response.data?.theme;
-      if (t) setThemeName(t);
-    } catch (err) {
-      // ignore
-    }
-  };
-
   const setTheme = async (name) => {
     setThemeName(name);
-    try {
-      await authService.updateProfile({ theme: name });
-    } catch (err) {
-      // ignore
-    }
+    await AsyncStorage.setItem(THEME_KEY, name);
   };
 
   let resolvedTheme = themeName;
