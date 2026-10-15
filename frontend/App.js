@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, StatusBar, Pressable } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -10,6 +10,7 @@ import { ThemeProvider, useTheme } from './src/context/ThemeContext';
 import { LanguageProvider } from './src/i18n/LanguageContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { s } from './src/utils/responsive';
+import LoadingScreen from './src/components/LoadingScreen';
 
 import ListScreen from './src/screens/ListScreen';
 import DetailScreen from './src/screens/DetailScreen';
@@ -141,6 +142,15 @@ const AppNavigator = () => {
 };
 
 export default function App() {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setReady(true), 2200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!ready) return <LoadingScreen />;
+
   return (
     <AppProvider>
       <ThemeProvider>

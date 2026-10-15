@@ -60,8 +60,8 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Gin', quantity: '45', unit: 'ml' },
       { name: 'Maraschino Liqueur', quantity: '15', unit: 'ml' },
-      { name: 'Creme de Violette', quantity: '10', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '15', unit: 'ml' }
+      { name: 'Creme de Violette', quantity: '15', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '22.5', unit: 'ml' }
     ]
   },
   {
@@ -78,7 +78,7 @@ const COCKTAILS = [
       { name: 'White Rum', quantity: '30', unit: 'ml' },
       { name: 'Cognac', quantity: '30', unit: 'ml' },
       { name: 'Triple Sec', quantity: '30', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '20', unit: 'ml' }
+      { name: 'Lemon Juice', quantity: '15', unit: 'ml' }
     ]
   },
   {
@@ -108,10 +108,9 @@ const COCKTAILS = [
     preparation_time: 5,
     steps: '1. Rim a cocktail glass with sugar.\n2. Add all ingredients to a shaker with ice.\n3. Shake well until chilled.\n4. Strain into the prepared glass.\n5. Garnish with a long lemon peel.',
     ingredients: [
-      { name: 'Cognac', quantity: '60', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '20', unit: 'ml' },
-      { name: 'Maraschino Liqueur', quantity: '10', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '5', unit: 'ml' },
+      { name: 'Cognac', quantity: '45', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '10', unit: 'ml' },
+      { name: 'Maraschino Liqueur', quantity: '15', unit: 'ml' },
       { name: 'Angostura Bitters', quantity: '2', unit: 'dashes' }
     ]
   },
@@ -126,9 +125,9 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a cherry.',
     ingredients: [
-      { name: 'Gin', quantity: '40', unit: 'ml' },
+      { name: 'Gin', quantity: '45', unit: 'ml' },
       { name: 'Maraschino Liqueur', quantity: '15', unit: 'ml' },
-      { name: 'Orange Juice', quantity: '15', unit: 'ml' },
+      { name: 'Orange Bitters', quantity: '2', unit: 'dashes' },
       { name: 'Lemon Juice', quantity: '15', unit: 'ml' }
     ]
   },
@@ -144,9 +143,9 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a shaker without ice.\n2. Dry shake vigorously for 10 seconds.\n3. Add ice and shake again until chilled.\n4. Strain into a chilled cocktail glass.\n5. Garnish with a lemon twist.',
     ingredients: [
       { name: 'Gin', quantity: '45', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '15', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '15', unit: 'ml' },
-      { name: 'Raspberry Liqueur', quantity: '10', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '22.5', unit: 'ml' },
+      { name: 'Dry Vermouth', quantity: '15', unit: 'ml' },
+      { name: 'Raspberry Syrup', quantity: '15', unit: 'ml' },
       { name: 'Egg White', quantity: '1', unit: 'pc' }
     ]
   },
@@ -161,9 +160,9 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lime wheel if desired.',
     ingredients: [
-      { name: 'White Rum', quantity: '60', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '30', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '15', unit: 'ml' }
+      { name: 'White Rum', quantity: '50', unit: 'ml' },
+      { name: 'Lime Juice', quantity: '20', unit: 'ml' },
+      { name: 'Simple Syrup', quantity: '10', unit: 'ml' }
     ]
   },
   {
@@ -192,10 +191,10 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add gin, lemon juice, and sugar to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a highball glass with ice.\n4. Top with soda water.\n5. Garnish with a lemon slice.',
     ingredients: [
-      { name: 'Gin', quantity: '45', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '30', unit: 'ml' },
+      { name: 'Gin', quantity: '60', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '20', unit: 'ml' },
       { name: 'Simple Syrup', quantity: '15', unit: 'ml' },
-      { name: 'Soda Water', quantity: '60', unit: 'ml' }
+      { name: 'Soda Water', quantity: '60', unit: 'ml' },
     ]
   },
   {
@@ -211,7 +210,7 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Gin', quantity: '45', unit: 'ml' },
       { name: 'Sweet Vermouth', quantity: '45', unit: 'ml' },
-      { name: 'Fernet-Branca', quantity: '5', unit: 'ml' }
+      { name: 'Fernet-Branca', quantity: '7.5', unit: 'ml' }
     ]
   },
   {
@@ -225,9 +224,9 @@ const COCKTAILS = [
     preparation_time: 3,
     steps: '1. Add gin, lemon juice, and sugar to a Collins glass with ice.\n2. Stir well.\n3. Top with soda water.\n4. Garnish with a lemon slice and cherry.',
     ingredients: [
-      { name: 'Gin', quantity: '45', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '30', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '15', unit: 'ml' },
+      { name: 'Gin', quantity: '50', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '25', unit: 'ml' },
+      { name: 'Simple Syrup', quantity: '20', unit: 'ml' },
       { name: 'Soda Water', quantity: '90', unit: 'ml' }
     ]
   },
@@ -259,8 +258,8 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a mixing glass with ice.\n2. Stir well for 20-30 seconds.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a cherry.',
     ingredients: [
-      { name: 'Rye Whiskey', quantity: '60', unit: 'ml' },
-      { name: 'Sweet Vermouth', quantity: '30', unit: 'ml' },
+      { name: 'Rye Whiskey', quantity: '50', unit: 'ml' },
+      { name: 'Sweet Vermouth', quantity: '20', unit: 'ml' },
       { name: 'Angostura Bitters', quantity: '2', unit: 'dashes' }
     ]
   },
@@ -275,10 +274,10 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a mixing glass with ice.\n2. Stir well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a cherry or lemon twist.',
     ingredients: [
-      { name: 'Gin', quantity: '60', unit: 'ml' },
+      { name: 'Gin', quantity: '45', unit: 'ml' },
       { name: 'Sweet Vermouth', quantity: '30', unit: 'ml' },
-      { name: 'Maraschino Liqueur', quantity: '10', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '10', unit: 'ml' }
+      { name: 'Maraschino Liqueur', quantity: '15', unit: 'ml' },
+      { name: 'Simple Syrup', quantity: '10', unit: 'ml' }
     ]
   },
   {
@@ -293,8 +292,9 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a cherry if desired.',
     ingredients: [
       { name: 'White Rum', quantity: '45', unit: 'ml' },
-      { name: 'Pineapple Juice', quantity: '60', unit: 'ml' },
-      { name: 'Maraschino Liqueur', quantity: '10', unit: 'ml' },
+      { name: 'Pineapple Juice', quantity: '15', unit: 'ml' },
+      { name: 'Maraschino Liqueur', quantity: '15', unit: 'ml' },
+      { name: 'Lime Juice', quantity: '5', unit: 'ml' },
       { name: 'Grenadine', quantity: '10', unit: 'ml' }
     ]
   },
@@ -309,9 +309,10 @@ const COCKTAILS = [
     preparation_time: 3,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with an orange slice.',
     ingredients: [
-      { name: 'Gin', quantity: '40', unit: 'ml' },
-      { name: 'Orange Juice', quantity: '40', unit: 'ml' },
-      { name: 'Grenadine', quantity: '10', unit: 'ml' }
+      { name: 'Gin', quantity: '50', unit: 'ml' },
+      { name: 'Orange Juice', quantity: '25', unit: 'ml' },
+      { name: 'Grenadine', quantity: '5', unit: 'ml' },
+      { name: 'Absinthe', quantity: '5', unit: 'ml' }
     ]
   },
   {
@@ -341,9 +342,9 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add sugar, bitters, and a splash of water to a rocks glass.\n2. Muddle until sugar dissolves.\n3. Add a large ice cube and whiskey.\n4. Stir gently.\n5. Garnish with an orange peel and cherry.',
     ingredients: [
-      { name: 'Bourbon', quantity: '60', unit: 'ml' },
+      { name: 'Bourbon', quantity: '50', unit: 'ml' },
       { name: 'Sugar', quantity: '1', unit: 'tsp' },
-      { name: 'Angostura Bitters', quantity: '3', unit: 'dashes' },
+      { name: 'Angostura Bitters', quantity: '2', unit: 'dashes' },
       { name: 'Orange Peel', quantity: '1', unit: 'pc' }
     ]
   },
@@ -359,7 +360,7 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with an orange twist.',
     ingredients: [
       { name: 'Gin', quantity: '30', unit: 'ml' },
-      { name: 'Apricot Brandy', quantity: '20', unit: 'ml' },
+      { name: 'Apricot Brandy', quantity: '15', unit: 'ml' },
       { name: 'Orange Juice', quantity: '15', unit: 'ml' }
     ]
   },
@@ -374,11 +375,11 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a Collins glass with ice.\n4. Top with soda water if desired.\n5. Garnish with a fruit slice.',
     ingredients: [
-      { name: 'Dark Rum', quantity: '60', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '30', unit: 'ml' },
+      { name: 'Dark Rum', quantity: '45', unit: 'ml' },
+      { name: 'Lime Juice', quantity: '20', unit: 'ml' },
       { name: 'Simple Syrup', quantity: '15', unit: 'ml' },
-      { name: 'Pineapple Juice', quantity: '30', unit: 'ml' },
-      { name: 'Angostura Bitters', quantity: '2', unit: 'dashes' }
+      { name: 'Orange Juice', quantity: '15', unit: 'ml' },
+      { name: 'Grenadine', quantity: '10', unit: 'ml' }
     ]
   },
   {
@@ -393,9 +394,8 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake vigorously until well chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with freshly grated nutmeg.',
     ingredients: [
       { name: 'Cognac', quantity: '15', unit: 'ml' },
-      { name: 'Sweet Vermouth', quantity: '30', unit: 'ml' },
-      { name: 'Egg Yolk', quantity: '1', unit: 'pc' },
-      { name: 'Simple Syrup', quantity: '10', unit: 'ml' }
+      { name: 'Port', quantity: '45', unit: 'ml' },
+      { name: 'Egg Yolk', quantity: '1', unit: 'pc' }
     ]
   },
   {
@@ -411,11 +411,12 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Gin', quantity: '45', unit: 'ml' },
       { name: 'Cream', quantity: '30', unit: 'ml' },
-      { name: 'Egg White', quantity: '1', unit: 'pc' },
+      { name: 'Egg White', quantity: '2', unit: 'pc' },
       { name: 'Lemon Juice', quantity: '15', unit: 'ml' },
       { name: 'Lime Juice', quantity: '15', unit: 'ml' },
       { name: 'Simple Syrup', quantity: '15', unit: 'ml' },
-      { name: 'Soda Water', quantity: '60', unit: 'ml' }
+      { name: 'Soda Water', quantity: '60', unit: 'ml' },
+      { name: 'Orange Flower Water', quantity: '3', unit: 'dashes' }
     ]
   },
   {
@@ -430,7 +431,7 @@ const COCKTAILS = [
     steps: '1. Add Scotch and Drambuie to a rocks glass with ice.\n2. Stir gently to combine.\n3. Garnish with a lemon twist if desired.',
     ingredients: [
       { name: 'Scotch', quantity: '45', unit: 'ml' },
-      { name: 'Drambuie', quantity: '25', unit: 'ml' }
+      { name: 'Drambuie', quantity: '22.5', unit: 'ml' }
     ]
   },
   {
@@ -446,8 +447,8 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Rye Whiskey', quantity: '60', unit: 'ml' },
       { name: 'Absinthe', quantity: '5', unit: 'ml' },
-      { name: 'Peychauds Bitters', quantity: '3', unit: 'dashes' },
-      { name: 'Sugar', quantity: '1', unit: 'tsp' }
+      { name: 'Peychauds Bitters', quantity: '2', unit: 'dashes' },
+      { name: 'Simple Syrup', quantity: '7.5', unit: 'ml' }
     ]
   },
   {
@@ -462,8 +463,8 @@ const COCKTAILS = [
     steps: '1. Rim a cocktail glass with sugar.\n2. Add all ingredients to a shaker with ice.\n3. Shake well until chilled.\n4. Strain into the prepared glass.\n5. Garnish with a lemon twist.',
     ingredients: [
       { name: 'Cognac', quantity: '50', unit: 'ml' },
-      { name: 'Triple Sec', quantity: '25', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '25', unit: 'ml' }
+      { name: 'Triple Sec', quantity: '20', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '20', unit: 'ml' }
     ]
   },
   {
@@ -492,9 +493,9 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a mixing glass with ice.\n2. Stir well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a cherry and lemon twist.',
     ingredients: [
-      { name: 'Gin', quantity: '30', unit: 'ml' },
+      { name: 'Gin', quantity: '45', unit: 'ml' },
       { name: 'Dry Vermouth', quantity: '30', unit: 'ml' },
-      { name: 'Maraschino Liqueur', quantity: '10', unit: 'ml' },
+      { name: 'Maraschino Liqueur', quantity: '15', unit: 'ml' },
       { name: 'Absinthe', quantity: '2', unit: 'dashes' },
       { name: 'Orange Peel', quantity: '1', unit: 'pc' }
     ]
@@ -512,7 +513,8 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Rye Whiskey', quantity: '30', unit: 'ml' },
       { name: 'Cognac', quantity: '30', unit: 'ml' },
-      { name: 'Sweet Vermouth', quantity: '30', unit: 'ml' },
+      { name: 'Sweet Vermouth', quantity: '15', unit: 'ml' },
+      { name: 'Benedictine', quantity: '5', unit: 'ml' },
       { name: 'Peychauds Bitters', quantity: '2', unit: 'dashes' },
       { name: 'Angostura Bitters', quantity: '2', unit: 'dashes' }
     ]
@@ -528,8 +530,8 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a rocks glass with ice.\n4. Garnish with a cherry and orange slice.',
     ingredients: [
-      { name: 'Bourbon', quantity: '60', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '30', unit: 'ml' },
+      { name: 'Bourbon', quantity: '50', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '20', unit: 'ml' },
       { name: 'Simple Syrup', quantity: '15', unit: 'ml' }
     ]
   },
@@ -544,9 +546,9 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lemon twist.',
     ingredients: [
-      { name: 'Gin', quantity: '40', unit: 'ml' },
+      { name: 'Gin', quantity: '50', unit: 'ml' },
       { name: 'Triple Sec', quantity: '20', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '20', unit: 'ml' }
+      { name: 'Lemon Juice', quantity: '15', unit: 'ml' }
     ]
   },
   {
@@ -576,7 +578,7 @@ const COCKTAILS = [
     steps: '1. Add vodka and coffee liqueur to a rocks glass with ice.\n2. Stir gently to combine.\n3. Serve without garnish.',
     ingredients: [
       { name: 'Vodka', quantity: '50', unit: 'ml' },
-      { name: 'Coffee Liqueur', quantity: '25', unit: 'ml' }
+      { name: 'Coffee Liqueur', quantity: '20', unit: 'ml' }
     ]
   },
   {
@@ -594,8 +596,8 @@ const COCKTAILS = [
       { name: 'Tomato Juice', quantity: '90', unit: 'ml' },
       { name: 'Lemon Juice', quantity: '15', unit: 'ml' },
       { name: 'Worcestershire Sauce', quantity: '2', unit: 'dashes' },
-      { name: 'Hot Sauce', quantity: '2', unit: 'dashes' },
-      { name: 'Celery Salt', quantity: '1', unit: 'pinch' }
+      { name: 'Tabasco', quantity: '1', unit: 'dash' },
+      { name: 'Celery Salt', quantity: '1', unit: 'dash' }
     ]
   },
   {
@@ -611,7 +613,7 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Cachaca', quantity: '60', unit: 'ml' },
       { name: 'Lime', quantity: '1', unit: 'pc' },
-      { name: 'Sugar', quantity: '2', unit: 'tsp' }
+      { name: 'Sugar', quantity: '4', unit: 'tsp' }
     ]
   },
   {
@@ -625,7 +627,8 @@ const COCKTAILS = [
     preparation_time: 3,
     steps: '1. Place a sugar cube in a champagne flute.\n2. Add Angostura bitters to the sugar cube.\n3. Slowly pour chilled Champagne over the sugar.\n4. Garnish with a lemon twist.',
     ingredients: [
-      { name: 'Champagne', quantity: '120', unit: 'ml' },
+      { name: 'Champagne', quantity: '90', unit: 'ml' },
+      { name: 'Cognac', quantity: '10', unit: 'ml' },
       { name: 'Sugar', quantity: '1', unit: 'cube' },
       { name: 'Angostura Bitters', quantity: '2', unit: 'dashes' }
     ]
@@ -641,11 +644,11 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lemon twist.',
     ingredients: [
-      { name: 'Gin', quantity: '20', unit: 'ml' },
-      { name: 'Triple Sec', quantity: '20', unit: 'ml' },
-      { name: 'Lillet Blanc', quantity: '20', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '20', unit: 'ml' },
-      { name: 'Absinthe', quantity: '2', unit: 'dashes' }
+      { name: 'Gin', quantity: '30', unit: 'ml' },
+      { name: 'Triple Sec', quantity: '30', unit: 'ml' },
+      { name: 'Lillet Blanc', quantity: '30', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '30', unit: 'ml' },
+      { name: 'Absinthe', quantity: '1', unit: 'dash' }
     ]
   },
   {
@@ -694,7 +697,7 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Gin', quantity: '30', unit: 'ml' },
       { name: 'Lemon Juice', quantity: '15', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '10', unit: 'ml' },
+      { name: 'Simple Syrup', quantity: '15', unit: 'ml' },
       { name: 'Champagne', quantity: '60', unit: 'ml' }
     ]
   },
@@ -724,10 +727,10 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with freshly grated nutmeg.',
     ingredients: [
-      { name: 'Galliano', quantity: '30', unit: 'ml' },
-      { name: 'Triple Sec', quantity: '15', unit: 'ml' },
-      { name: 'Orange Juice', quantity: '30', unit: 'ml' },
-      { name: 'Cream', quantity: '15', unit: 'ml' }
+      { name: 'Galliano', quantity: '20', unit: 'ml' },
+      { name: 'Triple Sec', quantity: '20', unit: 'ml' },
+      { name: 'Orange Juice', quantity: '20', unit: 'ml' },
+      { name: 'Cream', quantity: '10', unit: 'ml' }
     ]
   },
   {
@@ -741,9 +744,9 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with freshly grated nutmeg or mint leaf.',
     ingredients: [
-      { name: 'Creme de Menthe', quantity: '30', unit: 'ml' },
-      { name: 'Creme de Cacao', quantity: '30', unit: 'ml' },
-      { name: 'Cream', quantity: '30', unit: 'ml' }
+      { name: 'Creme de Menthe', quantity: '20', unit: 'ml' },
+      { name: 'Creme de Cacao', quantity: '20', unit: 'ml' },
+      { name: 'Cream', quantity: '20', unit: 'ml' }
     ]
   },
   {
@@ -758,8 +761,8 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lime wheel.',
     ingredients: [
       { name: 'White Rum', quantity: '60', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '40', unit: 'ml' },
-      { name: 'Grapefruit Juice', quantity: '20', unit: 'ml' },
+      { name: 'Lime Juice', quantity: '15', unit: 'ml' },
+      { name: 'Grapefruit Juice', quantity: '40', unit: 'ml' },
       { name: 'Maraschino Liqueur', quantity: '15', unit: 'ml' }
     ]
   },
@@ -774,7 +777,7 @@ const COCKTAILS = [
     preparation_time: 3,
     steps: '1. Add brandy to a Collins glass with ice.\n2. Top with ginger ale.\n3. Stir gently.\n4. Garnish with a long lemon peel.',
     ingredients: [
-      { name: 'Brandy', quantity: '45', unit: 'ml' },
+      { name: 'Cognac', quantity: '40', unit: 'ml' },
       { name: 'Ginger Ale', quantity: '120', unit: 'ml' },
       { name: 'Angostura Bitters', quantity: '2', unit: 'dashes' }
     ]
@@ -790,10 +793,10 @@ const COCKTAILS = [
     preparation_time: 5,
     steps: '1. Warm a coffee mug with hot water.\n2. Add Irish whiskey and sugar.\n3. Fill with hot coffee and stir.\n4. Float whipped cream on top.\n5. Do not stir the cream.',
     ingredients: [
-      { name: 'Irish Whiskey', quantity: '45', unit: 'ml' },
-      { name: 'Coffee Liqueur', quantity: '15', unit: 'ml' },
-      { name: 'Sugar', quantity: '2', unit: 'tsp' },
-      { name: 'Cream', quantity: '30', unit: 'ml' }
+      { name: 'Irish Whiskey', quantity: '50', unit: 'ml' },
+      { name: 'Hot Coffee', quantity: '120', unit: 'ml' },
+      { name: 'Sugar', quantity: '1', unit: 'tsp' },
+      { name: 'Cream', quantity: '50', unit: 'ml' }
     ]
   },
   {
@@ -807,7 +810,7 @@ const COCKTAILS = [
     preparation_time: 3,
     steps: '1. Add crème de cassis to a wine glass.\n2. Top with chilled white wine.\n3. Stir gently to combine.\n4. Serve without garnish.',
     ingredients: [
-      { name: 'White Wine', quantity: '100', unit: 'ml' },
+      { name: 'White Wine', quantity: '90', unit: 'ml' },
       { name: 'Creme de Cassis', quantity: '10', unit: 'ml' }
     ]
   },
@@ -828,8 +831,8 @@ const COCKTAILS = [
       { name: 'Tequila', quantity: '15', unit: 'ml' },
       { name: 'Triple Sec', quantity: '15', unit: 'ml' },
       { name: 'Lemon Juice', quantity: '30', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '15', unit: 'ml' },
-      { name: 'Coca-Cola', quantity: '30', unit: 'ml' }
+      { name: 'Simple Syrup', quantity: '20', unit: 'ml' },
+      { name: 'Coca-Cola', quantity: '60', unit: 'ml' }
     ]
   },
   {
@@ -843,11 +846,12 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a rocks glass with crushed ice.\n4. Garnish with a mint sprig and lime wheel.',
     ingredients: [
-      { name: 'White Rum', quantity: '30', unit: 'ml' },
-      { name: 'Dark Rum', quantity: '30', unit: 'ml' },
+      { name: 'Amber Jamaican Rum', quantity: '30', unit: 'ml' },
+      { name: 'Martinique Rum', quantity: '30', unit: 'ml' },
       { name: 'Lime Juice', quantity: '30', unit: 'ml' },
       { name: 'Orgeat', quantity: '15', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '10', unit: 'ml' }
+      { name: 'Orange Curacao', quantity: '15', unit: 'ml' },
+      { name: 'Simple Syrup', quantity: '7.5', unit: 'ml' }
     ]
   },
   {
@@ -862,7 +866,7 @@ const COCKTAILS = [
     steps: '1. Rim a rocks glass with salt.\n2. Add all ingredients to a shaker with ice.\n3. Shake well until chilled.\n4. Strain into the prepared glass with ice.\n5. Garnish with a lime wedge.',
     ingredients: [
       { name: 'Tequila', quantity: '50', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '30', unit: 'ml' },
+      { name: 'Lime Juice', quantity: '15', unit: 'ml' },
       { name: 'Triple Sec', quantity: '20', unit: 'ml' }
     ]
   },
@@ -877,8 +881,8 @@ const COCKTAILS = [
     preparation_time: 3,
     steps: '1. Pour orange juice into a champagne flute.\n2. Slowly top with chilled Champagne.\n3. Gently stir to combine.\n4. Serve immediately.',
     ingredients: [
-      { name: 'Champagne', quantity: '100', unit: 'ml' },
-      { name: 'Orange Juice', quantity: '100', unit: 'ml' }
+      { name: 'Champagne', quantity: '75', unit: 'ml' },
+      { name: 'Orange Juice', quantity: '75', unit: 'ml' }
     ]
   },
   {
@@ -893,8 +897,9 @@ const COCKTAILS = [
     steps: '1. Add mint leaves and sugar to a julep cup.\n2. Gently muddle to release mint oils.\n3. Add bourbon and crushed ice.\n4. Stir until the cup is frosted.\n5. Garnish with a generous mint sprig.',
     ingredients: [
       { name: 'Bourbon', quantity: '60', unit: 'ml' },
-      { name: 'Mint Leaves', quantity: '8', unit: 'leaves' },
-      { name: 'Sugar', quantity: '1', unit: 'tsp' }
+      { name: 'Mint', quantity: '4', unit: 'sprigs' },
+      { name: 'Powdered Sugar', quantity: '1', unit: 'tsp' },
+      { name: 'Water', quantity: '2', unit: 'tsp' }
     ]
   },
   {
@@ -908,10 +913,10 @@ const COCKTAILS = [
     preparation_time: 5,
     steps: '1. Add mint leaves to a Collins glass.\n2. Gently muddle to release mint oils.\n3. Add lime juice and sugar.\n4. Muddle again briefly.\n5. Fill with ice and add rum.\n6. Top with soda water.\n7. Stir gently and garnish with a mint sprig.',
     ingredients: [
-      { name: 'White Rum', quantity: '60', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '30', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '15', unit: 'ml' },
-      { name: 'Mint Leaves', quantity: '8', unit: 'leaves' },
+      { name: 'White Rum', quantity: '45', unit: 'ml' },
+      { name: 'Lime Juice', quantity: '20', unit: 'ml' },
+      { name: 'Sugar', quantity: '2', unit: 'tsp' },
+      { name: 'Mint Leaves', quantity: '6', unit: 'leaves' },
       { name: 'Soda Water', quantity: '60', unit: 'ml' }
     ]
   },
@@ -928,7 +933,7 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Vodka', quantity: '45', unit: 'ml' },
       { name: 'Ginger Beer', quantity: '120', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '15', unit: 'ml' }
+      { name: 'Lime Juice', quantity: '10', unit: 'ml' }
     ]
   },
   {
@@ -943,8 +948,8 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a blender with ice.\n2. Blend until smooth.\n3. Pour into a hurricane glass.\n4. Garnish with a pineapple wedge and cherry.',
     ingredients: [
       { name: 'White Rum', quantity: '50', unit: 'ml' },
-      { name: 'Coconut Cream', quantity: '50', unit: 'ml' },
-      { name: 'Pineapple Juice', quantity: '100', unit: 'ml' }
+      { name: 'Coconut Cream', quantity: '30', unit: 'ml' },
+      { name: 'Pineapple Juice', quantity: '50', unit: 'ml' }
     ]
   },
   {
@@ -959,7 +964,7 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a shaker without ice.\n2. Dry shake vigorously for 15 seconds.\n3. Add ice and shake again.\n4. Strain into a chilled cocktail glass.\n5. Garnish with Angostura bitters drops.',
     ingredients: [
       { name: 'Pisco', quantity: '60', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '30', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '30', unit: 'ml' },
       { name: 'Simple Syrup', quantity: '20', unit: 'ml' },
       { name: 'Egg White', quantity: '1', unit: 'pc' }
     ]
@@ -976,7 +981,7 @@ const COCKTAILS = [
     steps: '1. Add vodka and cranberry juice to a highball glass with ice.\n2. Top with grapefruit juice.\n3. Stir gently.\n4. Garnish with a lime wedge.',
     ingredients: [
       { name: 'Vodka', quantity: '40', unit: 'ml' },
-      { name: 'Cranberry Juice', quantity: '100', unit: 'ml' },
+      { name: 'Cranberry Juice', quantity: '120', unit: 'ml' },
       { name: 'Grapefruit Juice', quantity: '30', unit: 'ml' }
     ]
   },
@@ -1010,10 +1015,11 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Gin', quantity: '30', unit: 'ml' },
       { name: 'Cherry Heering', quantity: '15', unit: 'ml' },
-      { name: 'Benedictine', quantity: '7', unit: 'ml' },
-      { name: 'Pineapple Juice', quantity: '120', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '15', unit: 'ml' },
-      { name: 'Grenadine', quantity: '10', unit: 'ml' },
+      { name: 'Benedictine', quantity: '7.5', unit: 'ml' },
+      { name: 'Cointreau', quantity: '7.5', unit: 'ml' },
+      { name: 'Pineapple Juice', quantity: '15', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '10', unit: 'ml' },
+      { name: 'Grenadine', quantity: '7.5', unit: 'ml' },
       { name: 'Angostura Bitters', quantity: '1', unit: 'dash' }
     ]
   },
@@ -1029,8 +1035,8 @@ const COCKTAILS = [
     steps: '1. Add tequila and orange juice to a Collins glass with ice.\n2. Stir gently.\n3. Slowly pour grenadine down the side of the glass.\n4. Do not stir - let the colors layer.\n5. Garnish with an orange slice and cherry.',
     ingredients: [
       { name: 'Tequila', quantity: '45', unit: 'ml' },
-      { name: 'Orange Juice', quantity: '120', unit: 'ml' },
-      { name: 'Grenadine', quantity: '10', unit: 'ml' }
+      { name: 'Orange Juice', quantity: '90', unit: 'ml' },
+      { name: 'Grenadine', quantity: '15', unit: 'ml' }
     ]
   },
   {
@@ -1044,9 +1050,9 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a mixing glass with ice.\n2. Stir well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lemon peel.',
     ingredients: [
-      { name: 'Gin', quantity: '45', unit: 'ml' },
+      { name: 'Gin', quantity: '60', unit: 'ml' },
       { name: 'Vodka', quantity: '15', unit: 'ml' },
-      { name: 'Lillet Blanc', quantity: '10', unit: 'ml' }
+      { name: 'Lillet Blanc', quantity: '7.5', unit: 'ml' }
     ]
   },
   {
@@ -1060,12 +1066,16 @@ const COCKTAILS = [
     preparation_time: 5,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a tall glass with ice.\n4. Top with more rum if desired.\n5. Garnish with a mint sprig and fruit.',
     ingredients: [
-      { name: 'White Rum', quantity: '30', unit: 'ml' },
-      { name: 'Dark Rum', quantity: '30', unit: 'ml' },
+      { name: 'Jamaican Rum', quantity: '45', unit: 'ml' },
+      { name: 'Puerto Rican Rum', quantity: '15', unit: 'ml' },
+      { name: 'Gold Rum', quantity: '30', unit: 'ml' },
+      { name: 'Overproof Rum', quantity: '20', unit: 'ml' },
       { name: 'Pineapple Juice', quantity: '30', unit: 'ml' },
-      { name: 'Orange Juice', quantity: '30', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '15', unit: 'ml' },
-      { name: 'Grenadine', quantity: '10', unit: 'ml' }
+      { name: 'Lime Juice', quantity: '25', unit: 'ml' },
+      { name: 'Grapefruit Juice', quantity: '15', unit: 'ml' },
+      { name: 'Grenadine', quantity: '10', unit: 'ml' },
+      { name: 'Cinnamon Syrup', quantity: '5', unit: 'ml' },
+      { name: 'Absinthe', quantity: '2', unit: 'dashes' }
     ]
   },
   {
@@ -1079,10 +1089,12 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a highball glass with ice.\n4. Top with prosecco if desired.\n5. Garnish with a pineapple wedge.',
     ingredients: [
-      { name: 'White Rum', quantity: '45', unit: 'ml' },
-      { name: 'Galliano', quantity: '15', unit: 'ml' },
+      { name: 'White Rum', quantity: '30', unit: 'ml' },
+      { name: 'Maraschino Liqueur', quantity: '15', unit: 'ml' },
       { name: 'Pineapple Juice', quantity: '60', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '15', unit: 'ml' }
+      { name: 'Lime Juice', quantity: '15', unit: 'ml' },
+      { name: 'Angostura Bitters', quantity: '1', unit: 'dash' },
+      { name: 'Prosecco', quantity: '60', unit: 'ml' }
     ]
   },
   {
@@ -1096,8 +1108,8 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lemon twist.',
     ingredients: [
-      { name: 'Gin', quantity: '45', unit: 'ml' },
-      { name: 'Honey Syrup', quantity: '20', unit: 'ml' },
+      { name: 'Gin', quantity: '50', unit: 'ml' },
+      { name: 'Honey Syrup', quantity: '15', unit: 'ml' },
       { name: 'Lemon Juice', quantity: '20', unit: 'ml' }
     ]
   },
@@ -1112,9 +1124,9 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add gin, lemon juice, and sugar to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a rocks glass with crushed ice.\n4. Drizzle blackberry liqueur over the top.\n5. Garnish with fresh berries.',
     ingredients: [
-      { name: 'Gin', quantity: '40', unit: 'ml' },
+      { name: 'Gin', quantity: '45', unit: 'ml' },
       { name: 'Blackberry Liqueur', quantity: '15', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '20', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '25', unit: 'ml' },
       { name: 'Simple Syrup', quantity: '10', unit: 'ml' }
     ]
   },
@@ -1162,8 +1174,8 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake vigorously until well chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with three coffee beans.',
     ingredients: [
       { name: 'Vodka', quantity: '50', unit: 'ml' },
-      { name: 'Coffee Liqueur', quantity: '25', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '10', unit: 'ml' }
+      { name: 'Coffee Liqueur', quantity: '10', unit: 'ml' },
+      { name: 'Espresso', quantity: '30', unit: 'ml' }
     ]
   },
   {
@@ -1209,9 +1221,9 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lime wheel.',
     ingredients: [
       { name: 'Mezcal', quantity: '30', unit: 'ml' },
-      { name: 'Maraschino Liqueur', quantity: '15', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '20', unit: 'ml' },
-      { name: 'Agave Syrup', quantity: '10', unit: 'ml' }
+      { name: 'Maraschino Liqueur', quantity: '22.5', unit: 'ml' },
+      { name: 'Lime Juice', quantity: '22.5', unit: 'ml' },
+      { name: 'Green Chartreuse', quantity: '22.5', unit: 'ml' }
     ]
   },
   {
@@ -1225,10 +1237,9 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Rim a cocktail glass with sugar.\n2. Add all ingredients to a shaker with ice.\n3. Shake well until chilled.\n4. Strain into the prepared glass.\n5. Garnish with a lemon twist.',
     ingredients: [
-      { name: 'Vodka', quantity: '40', unit: 'ml' },
-      { name: 'Triple Sec', quantity: '15', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '20', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '10', unit: 'ml' }
+      { name: 'Vodka', quantity: '50', unit: 'ml' },
+      { name: 'Triple Sec', quantity: '20', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '15', unit: 'ml' }
     ]
   },
   {
@@ -1242,10 +1253,10 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lime twist.',
     ingredients: [
-      { name: 'Mezcal', quantity: '22', unit: 'ml' },
-      { name: 'Green Chartreuse', quantity: '22', unit: 'ml' },
-      { name: 'Aperol', quantity: '22', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '22', unit: 'ml' }
+      { name: 'Mezcal', quantity: '22.5', unit: 'ml' },
+      { name: 'Green Chartreuse', quantity: '22.5', unit: 'ml' },
+      { name: 'Aperol', quantity: '22.5', unit: 'ml' },
+      { name: 'Lime Juice', quantity: '22.5', unit: 'ml' }
     ]
   },
   {
@@ -1260,8 +1271,8 @@ const COCKTAILS = [
     steps: '1. Add bourbon, lemon juice, and sugar to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a rocks glass with ice.\n4. Float red wine on top by pouring over a spoon.\n5. Serve without stirring.',
     ingredients: [
       { name: 'Bourbon', quantity: '60', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '30', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '15', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '20', unit: 'ml' },
+      { name: 'Simple Syrup', quantity: '10', unit: 'ml' },
       { name: 'Red Wine', quantity: '15', unit: 'ml' }
     ]
   },
@@ -1312,10 +1323,10 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lemon twist if desired.',
     ingredients: [
-      { name: 'Bourbon', quantity: '30', unit: 'ml' },
-      { name: 'Aperol', quantity: '30', unit: 'ml' },
-      { name: 'Amaro Nonino', quantity: '30', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '30', unit: 'ml' }
+      { name: 'Bourbon', quantity: '22.5', unit: 'ml' },
+      { name: 'Aperol', quantity: '22.5', unit: 'ml' },
+      { name: 'Amaro Nonino', quantity: '22.5', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '22.5', unit: 'ml' }
     ]
   },
   {
@@ -1329,10 +1340,10 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Add blended scotch, lemon juice, and honey-ginger syrup to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a rocks glass with ice.\n4. Float Islay scotch on top.\n5. Garnish with a ginger slice.',
     ingredients: [
-      { name: 'Scotch', quantity: '60', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '22', unit: 'ml' },
-      { name: 'Honey Syrup', quantity: '22', unit: 'ml' },
-      { name: 'Ginger Syrup', quantity: '10', unit: 'ml' }
+      { name: 'Scotch', quantity: '50', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '25', unit: 'ml' },
+      { name: 'Honey-Ginger Syrup', quantity: '25', unit: 'ml' },
+      { name: 'Islay Scotch', quantity: '10', unit: 'ml' }
     ]
   },
   {
@@ -1429,8 +1440,8 @@ const COCKTAILS = [
     preparation_time: 4,
     steps: '1. Rim a rocks glass with salt.\n2. Add tequila, lime juice, and agave syrup to a shaker with ice.\n3. Shake well until chilled.\n4. Strain into the prepared glass with ice.\n5. Garnish with a lime wedge.',
     ingredients: [
-      { name: 'Tequila', quantity: '50', unit: 'ml' },
-      { name: 'Lime Juice', quantity: '25', unit: 'ml' },
+      { name: 'Tequila', quantity: '60', unit: 'ml' },
+      { name: 'Lime Juice', quantity: '30', unit: 'ml' },
       { name: 'Agave Syrup', quantity: '15', unit: 'ml' }
     ]
   },
@@ -1446,9 +1457,9 @@ const COCKTAILS = [
     steps: '1. Add all ingredients to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a chilled cocktail glass.\n4. Garnish with a lemon twist.',
     ingredients: [
       { name: 'Angostura Bitters', quantity: '45', unit: 'ml' },
-      { name: 'Orgeat', quantity: '22', unit: 'ml' },
-      { name: 'Lemon Juice', quantity: '22', unit: 'ml' },
-      { name: 'Simple Syrup', quantity: '10', unit: 'ml' }
+      { name: 'Orgeat', quantity: '20', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '15', unit: 'ml' },
+      { name: 'Rye Whiskey', quantity: '7.5', unit: 'ml' }
     ]
   },
   {
@@ -1532,6 +1543,136 @@ const COCKTAILS = [
     ingredients: [
       { name: 'Vodka', quantity: '50', unit: 'ml' },
       { name: 'Orange Juice', quantity: '120', unit: 'ml' }
+    ]
+  },
+  {
+    id: 93,
+    name: 'Virgin Mojito',
+    description: 'A refreshing non-alcoholic take on the Cuban classic. Combines lime, mint, sugar, and soda water for a crisp, hydrating drink perfect for any occasion.',
+    emoji: '🌿',
+    image_url: 'https://placehold.co/800x800/5BBCBF/ffffff?text=Virgin+Mojito&font=noto',
+    is_alcoholic: false,
+    base_spirit: 'None',
+    preparation_time: 5,
+    steps: '1. Add mint leaves to a Collins glass.\n2. Gently muddle to release mint oils.\n3. Add lime juice and sugar.\n4. Muddle again briefly.\n5. Fill with ice and top with soda water.\n6. Stir gently and garnish with a mint sprig.',
+    ingredients: [
+      { name: 'Lime Juice', quantity: '20', unit: 'ml' },
+      { name: 'Sugar', quantity: '2', unit: 'tsp' },
+      { name: 'Mint Leaves', quantity: '6', unit: 'leaves' },
+      { name: 'Soda Water', quantity: '120', unit: 'ml' }
+    ]
+  },
+  {
+    id: 94,
+    name: 'Shirley Temple',
+    description: 'A sweet and fizzy mocktail made with ginger ale, grenadine, and orange juice. A classic choice for kids and non-drinkers alike.',
+    emoji: '🍒',
+    image_url: 'https://placehold.co/800x800/FF6B6B/ffffff?text=Shirley+Temple&font=noto',
+    is_alcoholic: false,
+    base_spirit: 'None',
+    preparation_time: 3,
+    steps: '1. Fill a highball glass with ice.\n2. Add grenadine and orange juice.\n3. Top with ginger ale.\n4. Stir gently.\n5. Garnish with a maraschino cherry and orange slice.',
+    ingredients: [
+      { name: 'Ginger Ale', quantity: '120', unit: 'ml' },
+      { name: 'Grenadine', quantity: '10', unit: 'ml' },
+      { name: 'Orange Juice', quantity: '30', unit: 'ml' },
+      { name: 'Maraschino Cherry', quantity: '1', unit: 'pc' }
+    ]
+  },
+  {
+    id: 95,
+    name: 'Virgin Pi\u00f1a Colada',
+    description: 'A tropical and creamy mocktail that combines coconut cream and pineapple juice. All the flavor of the classic without the rum.',
+    emoji: '🥥',
+    image_url: 'https://placehold.co/800x800/F7DC6F/ffffff?text=Virgin+Pi%C3%B1a+Colada&font=noto',
+    is_alcoholic: false,
+    base_spirit: 'None',
+    preparation_time: 4,
+    steps: '1. Add coconut cream and pineapple juice to a blender with ice.\n2. Blend until smooth.\n3. Pour into a hurricane glass.\n4. Garnish with a pineapple wedge and cherry.',
+    ingredients: [
+      { name: 'Coconut Cream', quantity: '60', unit: 'ml' },
+      { name: 'Pineapple Juice', quantity: '90', unit: 'ml' }
+    ]
+  },
+  {
+    id: 96,
+    name: 'Virgin Mary',
+    description: 'A savory and refreshing mocktail made with tomato juice, lemon juice, and spices. The brunch classic without the vodka.',
+    emoji: '🍅',
+    image_url: 'https://placehold.co/800x800/E74C3C/ffffff?text=Virgin+Mary&font=noto',
+    is_alcoholic: false,
+    base_spirit: 'None',
+    preparation_time: 5,
+    steps: '1. Add tomato juice, lemon juice, Worcestershire sauce, and hot sauce to a shaker with ice.\n2. Shake briefly to combine.\n3. Strain into a highball glass with ice.\n4. Garnish with celery stalk and lemon wedge.',
+    ingredients: [
+      { name: 'Tomato Juice', quantity: '150', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '15', unit: 'ml' },
+      { name: 'Worcestershire Sauce', quantity: '2', unit: 'dashes' },
+      { name: 'Tabasco', quantity: '1', unit: 'dash' },
+      { name: 'Celery Salt', quantity: '1', unit: 'dash' }
+    ]
+  },
+  {
+    id: 97,
+    name: 'Arnold Palmer',
+    description: 'A refreshing half-and-half blend of iced tea and lemonade. Named after the legendary golfer, it is the perfect non-alcoholic refresher.',
+    emoji: '🍋',
+    image_url: 'https://placehold.co/800x800/8BC34A/ffffff?text=Arnold+Palmer&font=noto',
+    is_alcoholic: false,
+    base_spirit: 'None',
+    preparation_time: 3,
+    steps: '1. Fill a highball glass with ice.\n2. Add equal parts chilled iced tea and lemonade.\n3. Stir gently to combine.\n4. Garnish with a lemon slice.',
+    ingredients: [
+      { name: 'Iced Tea', quantity: '120', unit: 'ml' },
+      { name: 'Lemonade', quantity: '120', unit: 'ml' }
+    ]
+  },
+  {
+    id: 98,
+    name: 'Seedlip & Tonic',
+    description: 'A sophisticated non-alcoholic spirit serve. Seedlip Garden with tonic water and a fresh herb garnish.',
+    emoji: '🌱',
+    image_url: 'https://placehold.co/800x800/4A90E2/ffffff?text=Seedlip+Tonic&font=noto',
+    is_alcoholic: false,
+    base_spirit: 'None',
+    preparation_time: 3,
+    steps: '1. Fill a highball glass with ice.\n2. Add Seedlip Garden.\n3. Top with tonic water.\n4. Stir gently.\n5. Garnish with a rosemary sprig and cucumber slice.',
+    ingredients: [
+      { name: 'Seedlip Garden', quantity: '50', unit: 'ml' },
+      { name: 'Tonic Water', quantity: '120', unit: 'ml' }
+    ]
+  },
+  {
+    id: 99,
+    name: 'Cinderella',
+    description: 'A fruity and vibrant mocktail that blends orange juice, pineapple juice, lemon juice, and grenadine. A colorfully layered non-alcoholic drink.',
+    emoji: '🍊',
+    image_url: 'https://placehold.co/800x800/FF9800/ffffff?text=Cinderella&font=noto',
+    is_alcoholic: false,
+    base_spirit: 'None',
+    preparation_time: 4,
+    steps: '1. Add all juices to a shaker with ice.\n2. Shake well until chilled.\n3. Strain into a highball glass with ice.\n4. Add a splash of grenadine for color.\n5. Garnish with an orange slice and cherry.',
+    ingredients: [
+      { name: 'Orange Juice', quantity: '60', unit: 'ml' },
+      { name: 'Pineapple Juice', quantity: '60', unit: 'ml' },
+      { name: 'Lemon Juice', quantity: '30', unit: 'ml' },
+      { name: 'Grenadine', quantity: '15', unit: 'ml' }
+    ]
+  },
+  {
+    id: 100,
+    name: 'Virgin Margarita',
+    description: 'A tangy and refreshing mocktail that combines lime juice, agave syrup, and orange juice, served in a salt-rimmed glass.',
+    emoji: '🍹',
+    image_url: 'https://placehold.co/800x800/FFD700/ffffff?text=Virgin+Margarita&font=noto',
+    is_alcoholic: false,
+    base_spirit: 'None',
+    preparation_time: 4,
+    steps: '1. Rim a rocks glass with salt.\n2. Add lime juice, agave syrup, and orange juice to a shaker with ice.\n3. Shake well until chilled.\n4. Strain into the prepared glass with ice.\n5. Garnish with a lime wedge.',
+    ingredients: [
+      { name: 'Lime Juice', quantity: '20', unit: 'ml' },
+      { name: 'Agave Syrup', quantity: '15', unit: 'ml' },
+      { name: 'Orange Juice', quantity: '30', unit: 'ml' }
     ]
   }
 ];

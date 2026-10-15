@@ -8,6 +8,8 @@ const en = {
   classicFallback: 'A classic cocktail',
   delete: 'Delete',
   save: 'Save',
+  copied: 'Copied!',
+  copiedToClipboard: 'Copied to clipboard.',
 
   // Greetings
   goodMorning: 'Good morning',

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import {
   View, Text, ScrollView, TouchableOpacity, SafeAreaView,
-  StatusBar, ActivityIndicator, Alert, Dimensions,
+  StatusBar, ActivityIndicator, Alert, Dimensions, Image, Clipboard,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import Share from 'expo-sharing';
 import { Ionicons } from '@expo/vector-icons';
 import { dataService } from '../services/dataService';
 import { useAuth } from '../context/AppContext';
@@ -55,6 +56,39 @@ const useStyles = makeStyles((c, g) => ({
     shadowOpacity: 0.2,
     shadowRadius: 12,
     elevation: 6,
+  },
+  heroImageWrap: {
+    width: s(140),
+    height: s(140),
+    borderRadius: s(70),
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: c.surfaceCard,
+    shadowColor: c.black,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 12,
+    elevation: 6,
+  },
+  heroImage: {
+    width: s(140),
+    height: s(140),
+    borderRadius: s(70),
+  },
+  shareBtn: {
+    width: s(44),
+    height: s(44),
+    borderRadius: s(22),
+    backgroundColor: c.surfaceOverlay,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: s(8),
+    shadowColor: c.black,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 3,
   },
   infoSection: {
     backgroundColor: c.backgroundGray,
@@ -285,6 +319,26 @@ const DetailScreen = ({ route, navigation }) => {
       .filter(Boolean);
   };
 
+  const handleShare = async () => {
+    if (!cocktail) return;
+    const ingredients = (cocktail.cocktail_ingredients || cocktail.ingredients || [])
+      .map((ing) => {
+        const name = ing.ingredient?.name || ing.name;
+        const qty = ing.quantity ? `${ing.quantity} ${ing.unit || ''}` : '';
+        return `${name}${qty ? ' ' + qty : ''}`.trim();
+      })
+      .join(', ');
+    const message = `${tc.name}\n${tc.description || ''}\n\nIngredients: ${ingredients}\n\nPreparation:\n${steps.join('\n')}`;
+    try {
+      await Share.shareAsync(message, { dialogTitle: `Share ${tc.name}` });
+    } catch {
+      try {
+        await Clipboard.setString(message);
+        Alert.alert(t('copied'), t('copiedToClipboard'));
+      } catch {}
+    }
+  };
+
   if (loading) {
     return (
       <SafeAreaView style={styles.safeArea}>
@@ -343,9 +397,15 @@ const DetailScreen = ({ route, navigation }) => {
             end={{ x: 1, y: 1 }}
             style={styles.heroSection}
           >
-            <View style={styles.heroIconWrap}>
-              <CocktailSvgIcon name={cocktail.name} size={90} />
-            </View>
+            {cocktail.image_url ? (
+              <View style={styles.heroImageWrap}>
+                <Image source={{ uri: cocktail.image_url }} style={styles.heroImage} />
+              </View>
+            ) : (
+              <View style={styles.heroIconWrap}>
+                <CocktailSvgIcon name={cocktail.name} size={90} />
+              </View>
+            )}
           </LinearGradient>
 
           <View style={styles.infoSection}>
@@ -361,6 +421,9 @@ const DetailScreen = ({ route, navigation }) => {
                     color={isFavorite ? c.star : c.starEmpty}
                   />
                 )}
+              </TouchableOpacity>
+              <TouchableOpacity onPress={handleShare} style={styles.shareBtn}>
+                <Ionicons name="share-social" size={24} color={c.text} />
               </TouchableOpacity>
             </View>
 

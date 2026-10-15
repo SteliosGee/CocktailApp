@@ -6,30 +6,32 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#5BBCBF"
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.cocktailapp"
+      "bundleIdentifier": "com.steliosgee.cocktailapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#5BBCBF"
       },
-      "package": "com.cocktailapp"
+      "package": "com.steliosgee.cocktailapp",
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-asset"
-    ]
+      "expo-asset",
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d98b1a29-3e0a-4142-89b2-02b887f95f9e"
+      }
+    }
   }
 }

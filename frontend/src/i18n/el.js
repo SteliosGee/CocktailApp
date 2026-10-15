@@ -8,6 +8,8 @@ const el = {
   classicFallback: 'Ένα κλασικό κοκτέιλ',
   delete: 'Διαγραφή',
   save: 'Αποθήκευση',
+  copied: 'Αντιγράφηκε!',
+  copiedToClipboard: 'Αντιγράφηκε στο πρόχειρο.',
 
   // Greetings
   goodMorning: 'Καλημέρα',
