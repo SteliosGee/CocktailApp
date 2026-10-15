@@ -1,74 +1,25 @@
 import React from 'react';
-import { View } from 'react-native';
-import { SvgXml } from 'react-native-svg';
-import {
-  cocktailGlass, rocksGlass, highballGlass, champagneFlute,
-  wineGlass, coupeGlass, hurricaneGlass, copperMug, julepCup, coffeeMug,
-} from './cocktailSvg/glasses';
-import {
-  limeWheel, limeWedge, lemonTwist, lemonPeel, orangePeel, orangeSlice,
-  cherry, olive, mintSprig, pineappleWedge, lemonSlice,
-  berry, celeryStick, coffeeBeans, nutmeg, creamFloat, bittersDrops,
-} from './cocktailSvg/garnishes';
+import { View, Image } from 'react-native';
 import cocktailMap from './cocktailSvg/cocktailMap';
 
-const GLASSES = {
-  cocktail: cocktailGlass,
-  rocks: rocksGlass,
-  highball: highballGlass,
-  flute: champagneFlute,
-  wine: wineGlass,
-  coupe: coupeGlass,
-  hurricane: hurricaneGlass,
-  copper: copperMug,
-  julep: julepCup,
-  coffee: coffeeMug,
+const GLASS_ICONS = {
+  cocktail: require('../../assets/icons/cocktail.png'),
+  coupe: require('../../assets/icons/coupe.png'),
+  rocks: require('../../assets/icons/rocks.png'),
+  highball: require('../../assets/icons/highball.png'),
+  flute: require('../../assets/icons/champagne.png'),
+  wine: require('../../assets/icons/wine.png'),
+  hurricane: require('../../assets/icons/cocktail.png'),
+  copper: require('../../assets/icons/cocktail.png'),
+  julep: require('../../assets/icons/rocks.png'),
+  coffee: require('../../assets/icons/cocktail.png'),
 };
 
-const GARNISHES = {
-  limeWheel, limeWedge, lemonTwist, lemonPeel, orangePeel, orangeSlice,
-  cherry, olive, mintSprig, pineappleWedge, lemonSlice,
-  berry, celery: celeryStick, coffeeBeans, nutmeg,
-  cream: creamFloat, bitters: bittersDrops,
-};
-
-const fallback = {
-  glass: 'cocktail',
-  liquid: '#80DEEA',
-  fill: 0.65,
-  garnish: null,
-};
+const FALLBACK = require('../../assets/icons/cocktail.png');
 
 const CocktailIcon = ({ name, size = 48 }) => {
-  const config = cocktailMap[name] || fallback;
-  const glassFn = GLASSES[config.glass] || cocktailGlass;
-  const garnishFn = config.garnish ? GARNISHES[config.garnish] : null;
-
-  const garnishX = config.glass === 'highball' ? 42 : 44;
-  const garnishY = config.glass === 'flute' ? 6 : 14;
-
-  const glassXml = glassFn(config.fill || 0.65, config.liquid);
-  const garnishXml = garnishFn ? garnishFn(garnishX, garnishY) : '';
-
-  let rimXml = '';
-  if (config.saltRim) {
-    const rimY = config.glass === 'rocks' ? 20 : 12;
-    rimXml = Array.from({ length: 12 }, (_, i) =>
-      `<circle cx="${16 + i * 3}" cy="${rimY}" r="0.6" fill="white" opacity="0.8"/>`
-    ).join('');
-  }
-  if (config.sugarRim) {
-    const rimY = config.glass === 'rocks' ? 20 : 12;
-    rimXml = Array.from({ length: 12 }, (_, i) =>
-      `<circle cx="${16 + i * 3}" cy="${rimY}" r="0.5" fill="#FFF9C4" opacity="0.7"/>`
-    ).join('');
-  }
-
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-    ${glassXml}
-    ${garnishXml}
-    ${rimXml}
-  </svg>`;
+  const config = cocktailMap[name] || { glass: 'cocktail' };
+  const source = GLASS_ICONS[config.glass] || FALLBACK;
 
   return (
     <View style={{
@@ -78,7 +29,7 @@ const CocktailIcon = ({ name, size = 48 }) => {
       alignItems: 'center',
       justifyContent: 'center',
     }}>
-      <SvgXml xml={svg} width={size} height={size} />
+      <Image source={source} style={{ width: size, height: size }} />
     </View>
   );
 };
